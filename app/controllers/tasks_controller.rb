@@ -6,7 +6,11 @@ class TasksController < ApplicationController
   def create
     task = Task.create(task_params)
     render json: task
+  end
 
+  def update
+    @task = Task.find(JSON.parse(params['id']))
+    @task.update(task_params)
   end
 
   def task_params
