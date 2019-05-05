@@ -13,6 +13,11 @@ class TasksController < ApplicationController
     @task.update(task_params)
   end
 
+  def destroy
+    @task = Task.find(JSON.parse(params['id']))
+    @task.destroy
+end
+
   def task_params
     params.require(:task).permit(:name, :date, :description)
   end
