@@ -1,8 +1,6 @@
 class CreateTaskTable < ActiveRecord::Migration[5.2]
   def change
-    drop_table :task_tables
-
-    create_table :tasks do |t|
+    create_table :task_tables do |t|
       t.string :name
       t.string :description
       t.date :date
