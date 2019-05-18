@@ -66,4 +66,4 @@ jobs:
           name: install dependencies
           command: |
             gem update --system
-            gem install bundler
+            gem install bundler -v 2.0.0
