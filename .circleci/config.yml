@@ -17,7 +17,7 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      gem install bundler -v 2.0.0
+      - run: gem install bundler -v 2.0.0
       - checkout
 
       # Download and cache dependencies
